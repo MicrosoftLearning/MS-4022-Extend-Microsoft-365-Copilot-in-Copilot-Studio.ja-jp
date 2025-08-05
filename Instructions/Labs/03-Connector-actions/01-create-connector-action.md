@@ -19,7 +19,9 @@ lab:
 ## SharePoint コネクタ アクションを作成する
 
 1. Web ブラウザーで、[Copilot Studio](https://www.copilotstudio.microsoft.com) (`https://www.copilotstudio.microsoft.com`) に移動します。
-1. **[ライブラリ]** から **Product Support** エージェントを選びます。
+1. サイドバーの **[エージェント]** を選択します。
+1. **[Microsoft 365 Copilot]** を選択します。
+1. **[エージェント]** の下にある **Product Support** エージェントを選択します。
 1. **[アクション]** で、**[アクションの追加]** を選択します。
 1. **[アクションの追加]** ウィンドウで、**検索**バーに「`SharePoint`」と入力します。 適切なアクションがウィンドウに表示されるまで待ちます。
 1. **リスト フォルダー SharePoint** コネクタ アクションを参照して選択します。
