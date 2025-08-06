@@ -70,15 +70,19 @@ SharePoint URL を、典拠となるナレッジ ソースとしてエージェ�
 
 ### SharePoint URL を追加する
 
-1. Copilot Studio の Product Support エージェントの概要ページで、**[ナレッジ]** セクションの **[ナレッジの追加]** を選択します。
+1. Web ブラウザーで、[Microsoft Copilot Studio](https://copilotstudio.microsoft.com/) (`https://copilotstudio.microsoft.com`) に移動します。
+1. **[エージェント]** を選択します。
+1. **[Copilot for Microsoft 365]** を選択します。
+1. **Product Support** エージェントを選択します。
+1. エージェントの概要ページの **[ナレッジ]** セクションから **[ナレッジの追加]** を選択します。
 
     ![Microsoft Edge で開いた Copilot Studio のスクリーンショット。Product support エージェントの [ナレッジの追加] ボタンが強調表示されています。](../Media/product-support-add-knowledge.png)
 
-2. 開いたウィザードの **[ナレッジの追加]** ページで、**[SharePoint]** を選択します。
-3. テキスト ボックスに **Products** SharePoint ライブラリの URL を貼り付け、**[追加]** を選択します。 これは `https://DOMAIN.sharepoint.com/sites/ProductSupport/Products` という形式になります。
+1. 開いたウィザードの **[ナレッジの追加]** ページで、**[SharePoint]** を選択します。
+1. テキスト ボックスに **Products** SharePoint ライブラリの URL を貼り付け、**[追加]** を選択します。 これは `https://DOMAIN.sharepoint.com/sites/ProductSupport/Products` という形式になります。
 
-4. **[SharePoint の追加]** ウィンドウで **[追加]** を選択し、ナレッジ ソースがエージェントに追加されるまで待ちます。 この処理には 1 ～ 2 分かかる可能性があります。
-5. **Products** ライブラリがエージェントの概要情報の **[ナレッジ]** セクションに表示されていることに注目してください。
+1. **[SharePoint の追加]** ウィンドウで **[追加]** を選択し、ナレッジ ソースがエージェントに追加されるまで待ちます。 この処理には 1 ～ 2 分かかる可能性があります。
+1. **Products** ライブラリがエージェントの概要情報の **[ナレッジ]** セクションに表示されていることに注目してください。
 
 > **注**: Copilot Studio エージェントが、ユーザーの代わりにドキュメントにアクセスします。 エージェントは、エンド ユーザーがアクセスできるドキュメントからの回答とコンテンツのみを取得できます。
 
