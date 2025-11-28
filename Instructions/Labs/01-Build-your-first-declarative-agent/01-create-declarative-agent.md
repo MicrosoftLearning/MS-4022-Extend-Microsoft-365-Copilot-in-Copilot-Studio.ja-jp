@@ -35,22 +35,27 @@ lab:
     I'd like to create a product support agent that answers questions related to Contoso Electronics products.
     ```
 
-1. **[入力]** または **[送信]** を選択して、メッセージを送信します。
-1. エージェントの名前を提案するように求められたら、「`Product support`」と入力してメッセージを送信します。
-1. 対話的インターフェイスの上部にある **[構成に進む]** を選択して、エージェントの概要ページを表示し、生成 AI がそれまでに構成した内容を確認します。
+1. **[入力]** または **[送信]** を選択して、メッセージを送信します。 ウィザードによってエージェントの構成が開始されます。
+1. エージェントの名前を提案するように求められたら、「`Product support`」と入力してメッセージを送信します。 ウィザードによってエージェントの名前が更新されます。
+1. ウィザードによって、エージェントに関する詳細情報の入力が求められます。 応答する代わりに、会話型インターフェイスの上部にある **[構成に進む]** を選択して、エージェントの概要ページを表示し、生成 AI がそれまでに構成した内容を確認します。
+![エージェント作成用の会話型インターフェイスのスクリーンショット。[構成に進む] ボタンが強調表示されています。](../Media/skip-to-configure-agent.png)
 
 ## エージェントを構成し指示を定義する
 
-次に、エージェントのプロパティとメタデータを手動で更新します。
+次に、エージェントのプロパティとメタデータを手動で更新して、この演習の結果が一貫していることを確認します。
 
-1. 生成 AI ウィザードによってエージェントに定義された **[名前]** を確認します。 名前を更新して `Product support` になるようにします。
-1. **description** プロパティの値を `A product support agent that can answer queries about Contoso Electronics products` に更新します。
-1. **[指示]** テキスト ボックスに、次のように入力します。
+1. 生成 AI ウィザードによってエージェントに定義された **[名前]** を確認します。 名前を更新して、必要に応じて、`Product support` になるようにします。
+1. **description** プロパティを確認し、`A product support agent that can answer queries about Contoso Electronics products` に更新します。
+1. **[指示]** テキスト ボックスで、既存の指示を以下に置き換えます。
   
     ```md
-        You are an agent tasked with answering questions about Contoso Electronics products. Start every response to the user with "Thanks for using a Copilot agent!\n\n" and then answer the questions and help the user.
+        - You are an agent tasked with answering questions about Contoso Electronics products.
+        - Start every response to the user with "Thanks for using a Copilot agent!\n\n" and then answer the questions and help the user.
+        - Do not answer questions unrelated to Contoso Electronics products.
+        - Maintain a helpful and approachable tone throughout interactions.
     ```
 
+1. 提案されたプロンプトが、生成 AI を使用して生成されていることに注意してください。 これらのプロンプトは、今後の演習で更新します。
 1. ページの上部にある **[作成]** を選択して、エージェントを作成します。  しばらくすると、エージェントの概要ページが表示されます。
 
 ## Copilot Studio でエージェントをテストする
@@ -62,28 +67,29 @@ lab:
     ![公開前の Product support エージェント ページのスクリーンショット。](../Media/product-support-publish-details.png)
 
 1. エージェントの概要情報の右側に **[エージェントのテスト]** ウィンドウが表示されない場合は、[公開] ボタンの横にある **[テスト]** ボタンを選択して、テスト ウィンドウを開きます。
-1. テキスト ボックスに「`What can you do?`」と入力し、メッセージを送信します。
+1. テスト ペイン内のテキスト ボックスに「`What can you do?`」と入力し、メッセージを送信します。
 1. 応答を待ちます。 応答が "Copilot エージェントをご利用いただき、ありがとうございます。" というテキストで始まることに注目してください。 これは、前に定義したエージェントへの指示どおりです。
 
     ![テスト ウィンドウでの Product support エージェントとの会話のスクリーンショット。](../Media/product-support-test-pane-1.png)
 
-    また、現在、エージェントには指示はありますが、カスタム ナレッジ ソースやアクションはまだないことに注意してください。 Contoso 製品に関する質問に回答するようにエージェントをまだ構成していません。 これは次の演習で行います。
+    また、現在、エージェントには指示はありますが、カスタム ナレッジ ソースやアクションはまだないことに注意してください。 Contoso 製品に関する質問に正確に回答できるようにエージェントをまだ構成していません。 これは次の演習で行います。
 
     > [!NOTE]
-    > エージェントを編集する必要がある場合は、テスト ウィンドウを閉じ、エージェントの概要ページの **[詳細]** セクションで **[編集]** を選択します。 もう一度テストする前に、テスト ウィンドウ内の **[更新]** ボタンを選択して、最新の変更を読み込みます。
+    > エージェントを編集する必要がある場合は、エージェントの概要ページの **[詳細]** セクションで **[編集]** を選択します。 変更を保存。 もう一度テストする前に、テスト ペイン内の **[新しいテスト セッションの開始]** ボタンを選択します。
 
 ## エージェントを Microsoft 365 Copilot に公開する
 
-次に、宣言型エージェントを Microsoft 365 Copilot に公開します。 **Product support** エージェントの概要ページから、以下を行います。
+次に、エージェントを Microsoft 365 Copilot に公開します。 **Product support** エージェントの概要ページから、以下を行います。
 
 1. **[発行]** ボタンを選びます。 Microsoft 365 Copilot および Microsoft Teams のユーザーに表示されるエージェントの情報を入力するように求められます。
 
     > [!NOTE]
     > このフォームの情報は、組織の Office および Teams カタログのカタログ エントリと Microsoft 管理センターの統合アプリ一覧に入力するために使用されます。 エージェントを呼び出すために Microsoft 365 Copilot の言語モデルで使用されるわけではありません。
 
-1. **[簡単な説明]** テキスト ボックスに「`Answers questions about Contoso Electronics products`」と入力します。
+1. **[短い説明]** テキスト ボックスに「`Answers questions about Contoso Electronics products`」と入力し、自動生成されたコンテンツを置き換えます。
 1. 残りのフィールドには、既定の提案をそのまま使用します。
 1. **公開**を選択します。
+    ![[公開] ボタンを選択する前の [エージェントの公開] ウィンドウのスクリーンショット。](../Media/publish-window.png)
 1. エージェントが公開されるまで待ちます。  公開中にモーダル ウィンドウを閉じないでください。 これには数分かかることがあります。
 
     > [!NOTE]
@@ -91,6 +97,7 @@ lab:
 
 1. エージェントが公開されると、**[可用性オプション]** ウィンドウが表示されます。
 1. **[共有リンク]** で **[コピー]** を選択してエージェントの共有リンクをコピーしたあと、**[完了]** を選択します。
+    ![[コピー] ボタンが強調表示されている [可用性オプション] ウィンドウのスクリーンショット。](../Media/share-link-copy.png)
 1. エージェントが公開されたことがエージェントの概要ページの **[公開の詳細]** セクションに表示されていることに注目してください。
 
     ![Copilot Studio での Product support エージェントの [公開の詳細] セクションのスクリーンショット。](../Media/publish-details.png)
@@ -106,9 +113,9 @@ lab:
 
 ## エージェントを Microsoft 365 Copilot でテストする
 
-次に、宣言型エージェントを Microsoft 365 Copilot で実行し、その機能を**イマーシブ** エクスペリエンスと**コンテキスト内**エクスペリエンスの両方で検証しましょう。
+次に、エージェントを Microsoft 365 Copilot でテストし、その機能を**イマーシブ** エクスペリエンスと**コンテキスト内**エクスペリエンスの両方で検証しましょう。
 
-前の手順に従って、現在、**イマーシブ** エージェント エクスペリエンスを使用しています。 チャット インターフェイスの横にある **[エージェント]** ペインで、現在直接チャットしているエージェントとして **Product Support** が選択されていることを確認します。
+前の手順に従って、現在、**イマーシブ** エージェント エクスペリエンスを使用しています。 チャット インターフェイスの横にある **[エージェント]** セクションで、現在直接チャットしているエージェントとして **Product Support** が選択されていることに注意してください。
 
 ![Microsoft 365 Copilot での Product support エージェントとのイマーシブ エクスペリエンスのスクリーンショット。](../Media/product-support-immersive.png)
 
@@ -117,7 +124,7 @@ lab:
 
 ブラウザーで続けて、**コンテキスト内**エクスペリエンスをテストしてみましょう。
 
-1. サイドバーの **[エージェント]** ペインの上にある **[チャット]** または **[M365 Copilot]** を選択して、**Product Support** エージェントとのイマーシブ チャットを終了し、Microsoft 365 Copilot とチャットします。
+1. サイド バーの **[エージェント]** ペインの上にある **[新しいチャット]** を選択し、**Product Support** エージェントとのイマーシブ チャットを終了し、Microsoft 365 Copilot との新しい会話を開始します。
 
     ![Microsoft 365 Copilot のサイドバーにある [Copilot] ボタンのスクリーンショット。](../Media/select-copilot.png)
 
@@ -125,7 +132,7 @@ lab:
 
     ![Microsoft 365 Copilot のエージェント ポップアップを示す Microsoft Edge のスクリーンショット。](../Media/copilot-agents-flyout.png)
 
-1. ポップアップで **Product support** を選択します。 メッセージ ボックスの上にあるステータス メッセージに注目してください。 **Chatting with Product support** が表示されます。これは、エージェントのコンテキスト内エクスペリエンスを使用していることを示します。
+1. ポップアップで **[Product Support]** を選択します。 メッセージ ボックスの上にあるステータス メッセージに注目してください。 **[Product Support とチャット中]** と表示されます。 これで、Copilot との会話内で Product Support エージェントと**コンテキストを踏まえて**チャットしています。つまり、エージェントは Copilot との会話のコンテキストを考慮できます。
 
     ![Microsoft 365 Copilot を示す Microsoft Edge のスクリーンショット。 ステータス メッセージ 'Chatting with Product support' が強調表示されています。](../Media/product-support-in-context.png)
 
@@ -133,7 +140,7 @@ lab:
 
 1. 応答を待ちます。 応答が "質問をありがとうございます。" というテキストで始まることに注目してください。 これは、エージェントへの指示で指定したガイダンスに従っています。
 
-1. コンテキスト内エクスペリエンスを終了するには、ステータス メッセージでバツ印 (X) を選択します。 ステータス メッセージが削除され、エージェントとのチャットが終了したことを示すメッセージがチャット ウィンドウに表示されます。
+1. コンテキスト内エクスペリエンスを終了するには、ステータス メッセージでバツ印 (X) を選択します。 ステータス メッセージが削除され、Product Support エージェントとのチャットが終了したことを示すメッセージがチャット ウィンドウに表示されていることに注意してください。 Copilot と直接会話を続けられます。
 
     ![Microsoft 365 Copilot を示す Microsoft Edge のスクリーンショット。 エージェント ステータスメッセージのクロス アイコンが強調表示されています。](../Media/exit-in-context-experience.png)
 
