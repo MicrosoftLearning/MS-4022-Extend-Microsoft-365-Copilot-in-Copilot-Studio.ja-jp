@@ -1,6 +1,13 @@
 ---
 lab:
   title: 1.1 宣言型エージェントを作成する
+  description: この演習では、生成 AI を使用して宣言型エージェントを作成し、指示を改善し、エージェントを Microsoft 365 に公開し、Microsoft 365 Copilot でエージェントをテストします。
+  duration: 20 minutes
+  level: 200
+  islab: true
+  primarytopics:
+    - Microsoft 365
+    - Microsoft 365 Copilot
 ---
 
 # 宣言型エージェントを作成する

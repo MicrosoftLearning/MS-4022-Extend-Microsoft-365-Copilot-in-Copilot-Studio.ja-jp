@@ -1,6 +1,10 @@
 ---
 lab:
   title: '3.1:コネクタ ツールを作成する'
+  description: この演習では、Copilot Studio で宣言型エージェントのコネクタ ツールを構成します。 "SharePoint - リスト フォルダー" コネクタを使用して、製品サポート ファイルを含んだ Products フォルダーからファイルのリストを取得します。
+  duration: 15 minutes
+  level: 200
+  islab: true
 ---
 
 # コネクタ ツールを作成する
