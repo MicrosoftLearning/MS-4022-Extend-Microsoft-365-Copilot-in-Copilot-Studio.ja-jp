@@ -18,13 +18,13 @@ lab:
 1. Web ブラウザーで [Copilot Studio](https://copilotstudio.microsoft.com) (`https://copilotstudio.microsoft.com`) に移動して、Copilot Studio を開きます。
 1. 左側のナビゲーションから **[ツール]** を選択します。
 1. **[+ 新しいツール]** を選択します。
-1. [新しいツール] ポップアップ ウィンドウで、**[プロンプト]** を選択します。 プロンプト ビルダー UI に移動します。 Copilot はこのウィンドウ内で使用できますが、この演習ではプロンプトを手動で定義します。
-1. ウィンドウの上部にあるテキスト ボックスで、自動生成された名前を選択し、名前 **Marketing Pitch Prompt** に置き換えます。
+1. **[新しいツール]** ダイアログボックスで **[プロンプト]** を選択します。 プロンプト ビルダー UI に移動します。 Copilot をこのウィンドウ内で使用できますが、この演習ではプロンプトを手動で定義します。
+1. ウィンドウの上部にあるテキスト ボックスで、自動生成された名前を選択し、名前 `Marketing Pitch Prompt` に置き換えます。
 1. **[指示]** テキスト ボックスに「`Create a marketing pitch for a product based on a `」と入力します。
 1. 入力した文の末尾にカーソルを置いて、**[コンテンツの追加]** を選択します。
 1. **[テキスト]** を選択します。
 1. **[名前]** フィールドに「`Draft`」と入力します。
-1.  **[サンプル データ]** フィールドに「`The Mighty Mechanical Pencil is new, exciting, and useful. It's not only the first of its kind pencil, but it's fun to use.`」と入力して、**[閉じる]** を選択します。
+1. **[サンプル データ]** フィールドに「`The Mighty Mechanical Pencil is new, exciting, and useful. It's not only the first of its kind pencil, but it's fun to use.`」と入力して、**[閉じる]** を選択します。
 
     !["Draft" という名前で構成されている入力変数を示す、Copilot Studio のプロンプト ビルダー UI のスクリーンショット。](../Media/prompt-content-sample-data.png)
 
@@ -37,7 +37,8 @@ lab:
 
 1. **[指示]** テキストボックスで、既存の指示に以下を追加してプロンプトを変更します。
 
-    ```The pitch should follow the following Contoso guidelines:
+    ```plaintext
+    The pitch should follow the following Contoso guidelines:
        - Start with a brief hook
        - Describe unique value proposition
        - End with a call-to-action
@@ -71,7 +72,9 @@ lab:
 
 エージェントの指示を更新して、プロンプトの使用に関するガイダンスを指定します。
 
-1. **[指示]** テキスト ボックスで、既存の指示テキストに以下を追加し、変更を**保存**します: `Use the Marketing Pitch Prompt tool to craft pitches for products that follow Contoso guidelines based on users' draft ideas.`。
-1. **[おすすめプロンプト]** セクションで、Eagle Air のおすすめプロンプトを次のおすすめプロンプトに置き換え、変更を**保存**します: `Marketing Pitch` : `Create a marketing pitch following Contoso guidelines based on the following draft:`。
+1. **詳細** セクションで **編集** を選択します。
+1. **[指示]** テキスト ボックスで、既存の指示に「`Use the Marketing Pitch Prompt tool to craft pitches for products that follow Contoso guidelines based on users' draft ideas.`」というテキストを追加します。
+1. **[保存]** を選択して変更を保存します。
+1. **[推奨プロンプト]** セクションで、Eagle Air の推奨プロンプトを次の推奨プロンプトに置き換え、変更を**保存**します: `Marketing Pitch` : `Create a marketing pitch following Contoso guidelines based on the following draft:`。
 
 演習が完了し、エージェントのプロンプト ツールが作成されました。
