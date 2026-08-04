@@ -55,7 +55,7 @@ lab:
 
 1. **[指示]** テキスト ボックスに、次のように入力します。
   
-    ```md
+    ```text
         - You are an agent tasked with answering questions about Contoso Electronics products.
         - Start every response to the user with "Thanks for using a Copilot agent!\n\n" and then answer the questions and help the user.
         - Do not answer questions unrelated to Contoso Electronics products.
@@ -96,11 +96,12 @@ lab:
 > [!NOTE]
 > このフォームの情報は、組織の Office および Teams カタログのカタログ エントリと Microsoft 管理センターの統合アプリ一覧に入力するために使用されます。 エージェントを呼び出すために Microsoft 365 Copilot の言語モデルで使用されるわけではありません。
 
-1. **[短い説明]** テキスト ボックスに「`Answers questions about Contoso Electronics products`」と入力し、自動生成されたコンテンツを置き換えます。
+2. **[短い説明]** テキスト ボックスに「`Answers questions about Contoso Electronics products`」と入力し、自動生成されたコンテンツを置き換えます。
 
 1. 残りのフィールドには、既定の提案をそのまま使用します。
 
 1. **公開**を選択します。
+    
     ![[公開] ボタンを選択する前の [エージェントの公開] ウィンドウのスクリーンショット。](../Media/publish-window.png)
 
 1. エージェントが公開されるまで待ちます。  公開中にモーダル ウィンドウを閉じないでください。 これには数分かかることがあります。
@@ -108,7 +109,7 @@ lab:
 > [!NOTE]
 > **[公開]** を選択すると、エージェントに対応するボット リソースがテナントの Microsoft Entra ID 環境にプロビジョニングされます。 このリソースを使用すると、Microsoft Teams でエージェントとやり取りできます。
 
-1. エージェントが公開されると、**[可用性オプション]** ウィンドウが表示されます。
+6. エージェントが公開されると、**[可用性オプション]** ウィンドウが表示されます。
 
 1. **[共有リンク]** で **[コピー]** を選択してエージェントの共有リンクをコピーしてから、**[完了]** を選択します。
 
@@ -127,6 +128,9 @@ lab:
 
 1. エージェントが追加されるまで待ちます。 エージェントは Microsoft 365 Copilot で起動されます。
 
+> [!NOTE]
+> Microsoft 365 Copilot でエージェントが起動しない場合は、Microsoft Teams ページの左上にある **[App Launcher]** アイコン (グリッド アイコン) を使って Microsoft 365 Copilot に移動します。
+
 ## エージェントを Microsoft 365 Copilot でテストする
 
 次に、エージェントを Microsoft 365 Copilot でテストし、その機能を**イマーシブ**と**コンテキスト内**の両方のエクスペリエンスで検証しましょう。
@@ -134,6 +138,9 @@ lab:
 前の手順に従って、現在、**イマーシブ** エージェント エクスペリエンスを使用しています。 チャット インターフェイスの横にある **[エージェント]** セクションで、現在直接チャットしているエージェントとして **Product Support** が選択されていることに注意してください。
 
 ![Microsoft 365 Copilot での Product support エージェントとのイマーシブ エクスペリエンスのスクリーンショット。](../Media/product-support-immersive.png)
+
+> [!NOTE]
+> 左側のナビゲーション ウィンドウの **[エージェント]** セクションに **[製品サポート]** エージェントが表示されていない場合は、**[その他のエージェント]** を選択します。 次に、**[エージェント]** で、**[製品サポート]** エージェントをピン留めし、リストから選択します。
 
 1. プロンプト ボックスに「`What can you do?`」と入力し、メッセージを送信します。
 
