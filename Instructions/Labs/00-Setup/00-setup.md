@@ -26,7 +26,7 @@ lab:
 
 1. **Contoso (既定)** 環境の省略記号 (**...**) を選択し、**[Dataverse の追加]** を選びます。
 
-   ![Power Platform 管理センターで既定の環境に Dataverse を追加します。](../media/add-dataverse.png)
+   ![Power Platform 管理センターで既定の環境に Dataverse を追加します。](../Media/add-dataverse.png)
 
 1. 既定の設定をすべてそのままにして、**[追加]** を選択します。
 
@@ -37,12 +37,15 @@ lab:
    - **種類**: 開発者
    - **地域**: 既定の地域
    - **名前**: *自分の名前*
+   
+   ![Power Platform 管理センターで環境を作成します。](../Media/create-environment.png)
+
+1. **[デフォルト設定の変更]** を展開し、次の項目を設定します。
    - **環境グループ**: なし
    - **これをマネージド環境にする**: いいえ
    - **新機能を早期に取得する**: いいえ
    - **代理での作成**: いいえ
-
-   ![Power Platform 管理センターで環境を作成します。](../media/create-environment.png)
+   - **Dataverse 格納データを追加しますか?**: はい
 
 1. **[次へ]** を選択し、**[Dataverse の追加]** セクションで次のようにします。
 
@@ -52,22 +55,30 @@ lab:
 
 1. **[保存]** を選択し、環境の状態が **[準備完了]** になるまで待ちます (**[更新]** ボタンを使用してディスプレイを更新できます)。
 
-   > [!NOTE]
-   > テナントの構成によっては、環境のプロビジョニングに数分かかる場合があります。
+> [!NOTE]
+> テナントの構成によっては、環境のプロビジョニングに数分かかる場合があります。
 
-   ![Power Platform 管理センターで環境が作成されました。](../media/environment-created.png)
+   ![Power Platform 管理センターで環境が作成されました。](../Media/environment-created.png)
 
-1. 新しいブラウザー タブで、`https://copilotstudio.microsoft.com/` に移動し、メッセージが表示されたらサインインします。
+5. 新しいブラウザー タブで、`https://copilotstudio.microsoft.com/` に移動し、メッセージが表示されたらサインインします。
 
-   > [!NOTE]
-   > Copilot Studio にアクセスする際に問題が発生した場合は、Power Platform 管理センターで新しく作成した環境の環境 ID をコピーし、URL `https://copilotstudio.microsoft.com/environments/<environment-id>` に貼り付けます。 `<environment-id>` を、コピーした環境 ID に置き換えます。
+> [!NOTE]  
+> 環境への Copilot Studio の読み込みで問題が発生した場合は、次の動作を行います:
+> - まず、Power Platform 管理センターから環境 ID (GUID) をキャプチャします。
+>   1. `https://admin.powerplatform.microsoft.com/manage/environments` で作成した環境を開きます。
+>   2. URL の環境 ID (`12345678-90ab-cdef-1234-567890abcdef` などの長い文字列) を見つけます。
+>   3. この値をコピーして保存します。
+> - その後、ID を次の URL に貼り付けて、環境に直接アクセスしてみてください。
+>   ```
+>   https://copilotstudio.microsoft.com/environments/<your-environment-id>/home
+>   ```
 
-1. メッセージが表示されたら、**[開始する]** を選択し、既定の国または地域の設定はそのままにしておきます。
+6. メッセージが表示されたら、**[開始する]** を選択し、既定の国または地域の設定はそのままにしておきます。
 
 1. ウェルカム メッセージはスキップします。
 
 1. ページの右上隅で、環境セレクターを使用して環境を切り替え、作成した環境を選択します。
 
-   ![Copilot Studio で環境を選択します。](../media/select-environment.png)
+   ![Copilot Studio で環境を選択します。](../Media/select-environment.png)
 
 これで、作業を行う Power Platform 環境が作成されました。
